@@ -23,7 +23,7 @@ fastjsonschema==2.19.1
 fonttools==4.47.2
 fqdn==1.5.1
 idna==3.6
-ipykernel==6.28.0
+ipykernel==6.29.0
 ipython==8.20.0
 isoduration==20.11.0
 jedi==0.19.1
