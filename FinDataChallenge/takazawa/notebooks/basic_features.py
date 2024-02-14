@@ -36,7 +36,7 @@ train_prepared_stacked = count_encoding(train_prepared_stacked)
 # columns used for training -> all_cols
 num_cols = ['NoEmp', 'CreateJob', 'RetainedJob', 'ApprovalFY', 'DisbursementGross', 'GrAppv', 'SBA_Appv']
 retained_cat_cols = ['NewExist', 'RevLineCr', 'LowDoc', 'UrbanRural']
-timestamp_cols = ['DisbursementDate_Year','DisbursementDate_Year']
+timestamp_cols = ['DisbursementDate_Year','ApprovalDate_Year']
 franchise_cols = ['FranchiseCode1', 'FranchiseCode0']
 target_encode_cols = ['Sector', 'State', 'BankState']
 count_encoded_cols = [item + "_count" for item in target_encode_cols]
