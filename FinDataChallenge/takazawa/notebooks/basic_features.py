@@ -2,7 +2,7 @@
 import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
-import category_encoders as ces
+import category_encoders as ce
 
 
 # 訓練とテスト分けて前処理していただけると助かります．
