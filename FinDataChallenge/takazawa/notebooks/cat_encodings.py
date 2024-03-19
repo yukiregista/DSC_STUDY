@@ -49,7 +49,7 @@ def Holdout_target_encoding_smoothed(X,y,column,folds):
   return df
 
 def target_encode_test(train_X, train_y, test_X, column):
-  df = train_X; df['target'] = train_y
+  df = train_X; df.loc[:,'target'] = train_y
   mean = train_X.groupby(column)['target'].mean()
   test_X.loc[:, column + "_target"] = 0.9
   for ind in mean.index:
@@ -63,4 +63,14 @@ def target_encode_smooth_test(train_X, train_y, test_X, column):
   krr = krr.fit(df[[column]],df['target'])
   test_X.loc[:, column + "_target"] = 0.9
   test_X.loc[:, column + "_target"] = krr.predict_proba(test_X[[column]])[:,1]
+  return test_X
+
+
+def target_encode_cols_smooth_test(train_X, train_y, test_X, columns, name):
+  # we expect columns to be list of columns
+  df = train_X; df['target'] = train_y
+  krr = HistGradientBoostingClassifier()
+  krr = krr.fit(df[columns],df['target'])
+  test_X.loc[:, name + "_target"] = 0.9
+  test_X.loc[:, name + "_target"] = krr.predict_proba(test_X[columns])[:,1]
   return test_X

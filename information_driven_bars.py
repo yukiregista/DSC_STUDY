@@ -9,7 +9,6 @@ class EMA():
     
     def compute_EMA_and_add(self, newvalues):
         # computes EMA given new value and add data renew self.mean
-        new_means = []
         if (isinstance(newvalues, numbers.Number)): newvalues = [newvalues]
         newmeans = []
         for val in newvalues:

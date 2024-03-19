@@ -31,7 +31,7 @@ def clean_data(data):
 
     # coarse franchise col
     data['FranchiseCode1'] = (data['FranchiseCode']==1).astype("category")
-    data['FranchiseCode0'] = (data['FranchiseCode']==1).astype("category")
+    data['FranchiseCode0'] = (data['FranchiseCode']==0).astype("category")
     
     return data
     
