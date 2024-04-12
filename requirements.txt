@@ -22,7 +22,7 @@ executing==2.0.1
 fastjsonschema==2.19.1
 fonttools==4.47.2
 fqdn==1.5.1
-idna==3.6
+idna==3.7
 ipykernel==6.28.0
 ipython==8.20.0
 isoduration==20.11.0
